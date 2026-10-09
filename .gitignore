@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+
+# env files (secrets)
+.env*
+!.env.example
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# builds
+build/
+*.tsbuildinfo
+coverage/
+
+# Neon CLI local link
+.neon
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel
+*.pem

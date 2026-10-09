@@ -1,0 +1,38 @@
+{
+  "Metadata": {
+    "title": "Aktivni Zaedno",
+    "description": "Find sports partners, organize activities and build a sports community."
+  },
+  "Home": {
+    "tagline": "Sport for all ages",
+    "title": "Find someone to play with",
+    "subtitle": "Any sport, any city, any age. Coming soon.",
+    "sportsHeading": "Supported sports"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "bg": "Български",
+    "en": "English"
+  },
+  "Sports": {
+    "football": "Football",
+    "basketball": "Basketball",
+    "volleyball": "Volleyball",
+    "tennis": "Tennis",
+    "table_tennis": "Table tennis",
+    "badminton": "Badminton",
+    "padel": "Padel",
+    "running": "Running",
+    "walking": "Walking",
+    "cycling": "Cycling",
+    "swimming": "Swimming",
+    "fitness": "Fitness",
+    "yoga": "Yoga",
+    "hiking": "Hiking",
+    "other": "Other"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
+}
