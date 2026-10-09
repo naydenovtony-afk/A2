@@ -14,6 +14,9 @@
     "dev": "npm run dev -w az-web",
     "build": "npm run build -w az-web",
     "lint": "npm run lint -w az-web",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:generate": "npm run db:generate -w az-web",
+    "db:migrate": "npm run db:migrate -w az-web",
+    "db:seed": "npm run db:seed -w az-web"
   }
 }

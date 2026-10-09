@@ -17,6 +17,8 @@ find sports partners, organize activities, build sports communities. Any sport, 
 - `npm install` — install all workspaces.
 - `npm run dev` — start the web app on http://localhost:3000.
 - `npm run build` / `npm run lint` / `npm run typecheck`.
+- `npm run db:generate` (new migration from the schema), `npm run db:migrate` (apply to Neon),
+  `npm run db:seed` (refuses a non-empty DB; `npm run db:seed -- --reset` wipes and reseeds).
 
 ## Working rules
 - Work in small steps following the PDF's development order. After each step: build, type-check, lint,
@@ -37,6 +39,10 @@ find sports partners, organize activities, build sports communities. Any sport, 
 - "Add as friend" lives in an active activity's chat. Direct messages only for ACCEPTED friendships.
 - Chat transport: polling every 3–5 s behind the service layer (swappable for Pusher/Ably later).
 - Sports list is a constant in `az-shared`, not a DB table.
+- Data model changes vs the PDF: `startsAt` (timestamptz) + `durationMinutes` replace `date`; `city` and
+  `createdByUserId` on communities and activities; `users.role` (user/admin — admins verify venues) and
+  `users.preferredSports`; invites have `expiresAt`; venues start `pending`. Friendships store each pair
+  once, normalized `userAId < userBId` (unique + check), with `requestedByUserId` = who sent the request.
 - Timestamps are `timestamptz`; display in Europe/Sofia.
 - No photo uploads yet (initials avatars). Demo account: demo@aktivnizaedno.bg / demo123.
 - Out of scope for now: ratings/reputation, push notifications, Europe expansion.
